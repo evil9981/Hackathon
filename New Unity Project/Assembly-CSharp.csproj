@@ -45,8 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FollowRoomba.cs" />
-     <Compile Include="Assets\MoveComponent.cs" />
+     <Compile Include="Assets\Scripts\FollowRoomba.cs" />
+     <Compile Include="Assets\Scripts\MoveComponent.cs" />
+     <Compile Include="Assets\Scripts\PileOfDirtCollision.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
