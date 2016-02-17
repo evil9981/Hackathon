@@ -24,6 +24,7 @@ public class InGameMenu : MonoBehaviour {
         {
             if (ingameMenu.enabled == false)
             {
+
                 ingameMenu.enabled = true;
             }
             else
