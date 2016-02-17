@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\FollowRoomba.cs" />
+     <Compile Include="Assets\Scripts\InGameMenu.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MoveComponent.cs" />
