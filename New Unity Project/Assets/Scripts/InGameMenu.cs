@@ -7,15 +7,12 @@ public class InGameMenu : MonoBehaviour {
     public Canvas ingameMenu;
     public Button resumeGame;
     public Button quitToMain;
+    public Button resetLevel;
 
 	// Use this for initialization
 	void Start ()
     {
-        ingameMenu = ingameMenu.GetComponent<Canvas>();
-        resumeGame = resumeGame.GetComponent<Button>();
-        quitToMain = quitToMain.GetComponent<Button>();
         ingameMenu.enabled = false;
-
 	}
 	
     void Update()
@@ -36,12 +33,17 @@ public class InGameMenu : MonoBehaviour {
 
     public void QuitPress()
     {
-        Application.LoadLevel(0);
+        LevelManager.getInst().quitToMenu();
     }
   
     public void ResumePress()
     {
         ingameMenu.enabled = false;
+    }
 
-    }  
+    public void ResetLevel()
+    {
+        LevelManager.getInst().retryLevel();
+    }
+
 }

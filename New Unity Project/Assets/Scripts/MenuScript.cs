@@ -31,10 +31,10 @@ public class MenuScript : MonoBehaviour {
         startText.enabled = true;
         exitText.enabled = true;
     }
-	
+
     public void StartLevel()
     {
-        Application.LoadLevel(1);
+        LevelManager.getInst().advanceToNextLevel();
     }
 
     public void ExitGame()

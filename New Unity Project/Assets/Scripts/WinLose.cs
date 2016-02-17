@@ -48,10 +48,14 @@ public class WinLose : MonoBehaviour {
 	    
 
 	}
+    public int WIN = 1;
+    public int WIN_GOLD = 2;
+    public int LOSE_BATTERY = 3;
+    public int LOSE_WIRES = 4;
 
     void showEndOfGame(int Condition)
     {
-        if (Condition == 1)
+        if (Condition == WIN)
         {
             winMenu.enabled = true;
             pass.enabled = true;
@@ -59,7 +63,7 @@ public class WinLose : MonoBehaviour {
             winMainMenu.enabled = true;
             nextLevel.enabled = true;
         }
-        else if (Condition == 2)
+        else if (Condition == WIN_GOLD)
         {
             winMenu.enabled = true;
             gold.enabled = true;
@@ -67,14 +71,14 @@ public class WinLose : MonoBehaviour {
             winMainMenu.enabled = true;
             nextLevel.enabled = true;
         }
-        else if (Condition == 3)
+        else if (Condition == LOSE_BATTERY)
         {
             loseMenu.enabled = true;
             noBattery.enabled = true;
             loseMainMenu.enabled = true;
             loseRetry.enabled = true;
         }
-        else if (Condition == 4)
+        else if (Condition == LOSE_WIRES)
         {
             loseMenu.enabled = true;
             deathByWire.enabled = true;
@@ -85,16 +89,16 @@ public class WinLose : MonoBehaviour {
 
     public void nextLevelPress()
     {
-        Application.LoadLevel(2);
+        LevelManager.getInst().advanceToNextLevel();
     }
 
     public void retryPress()
     {
-        Application.LoadLevel(1);
+        LevelManager.getInst().retryLevel();
     }
 
     public void mainMenuPress()
     {
-        Application.LoadLevel(0);
+        LevelManager.getInst().quitToMenu();
     }
 }
