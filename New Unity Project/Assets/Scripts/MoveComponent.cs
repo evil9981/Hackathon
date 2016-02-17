@@ -12,7 +12,7 @@ public class MoveComponent : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-    public int FORCE_CONST = 150;
+    public int FORCE_CONST = 100;
 	void Update ()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -25,11 +25,11 @@ public class MoveComponent : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rigid_body.MoveRotation(rigid_body.rotation + 5.0f);
+            rigid_body.MoveRotation(rigid_body.rotation + 3.0f);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rigid_body.MoveRotation(rigid_body.rotation - 5.0f);
+            rigid_body.MoveRotation(rigid_body.rotation - 3.0f);
         }
 	}
 }
