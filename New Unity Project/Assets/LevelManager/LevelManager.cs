@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class LevelManager : MonoBehaviour 
+public class LevelManager  
 {
     static private LevelManager instance = new LevelManager();
 
 	// Use this for initialization
-	void Start () 
+    public LevelManager() 
     {
         LevelManager.instance = this;
 	}
@@ -16,20 +17,21 @@ public class LevelManager : MonoBehaviour
         return LevelManager.instance;
     }
 
-    int level = 0;
+    static int level = 0;
     public void advanceToNextLevel()
     {
         level++;
-        Application.LoadLevel(level);
+        SceneManager.LoadScene(level);
     }
     int MENU = 0;
     public void quitToMenu()
     {
-        Application.LoadLevel(MENU);
+        level = MENU;
+        SceneManager.LoadScene(level);
     }
 
     public void retryLevel()
     {
-        Application.LoadLevel(level);
+        SceneManager.LoadScene(level);
     }
 }

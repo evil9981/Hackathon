@@ -39,5 +39,11 @@ public class InGameMenu : MonoBehaviour {
     public void ResumePress()
     {
         ingameMenu.enabled = false;
-    }  
+    }
+
+    public void ResetLevel()
+    {
+        LevelManager.getInst().retryLevel();
+    }
+
 }

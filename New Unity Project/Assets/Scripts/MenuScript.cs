@@ -31,7 +31,7 @@ public class MenuScript : MonoBehaviour {
         startText.enabled = true;
         exitText.enabled = true;
     }
-	
+
     public void StartLevel()
     {
         LevelManager.getInst().advanceToNextLevel();
