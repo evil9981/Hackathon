@@ -29,18 +29,18 @@ public class LevelManager
     static int level = 0;
     public void levelComplete()
     {
-        if (!(level < 3))
+        if (!(level < 2))
         {
-            level_complete[level - 3] = true;
+            level_complete[level - 2] = true;
         }
     }
 
     public void levelGoldComplete()
     {
-        if (!(level < 3))
+        if (!(level < 2))
         {
-            level_complete[level - 3] = true;
-            level_gold_complete[level - 3] = true;
+            level_complete[level - 2] = true;
+            level_gold_complete[level - 2] = true;
         }
     }
 

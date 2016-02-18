@@ -62,51 +62,51 @@ public class SelectScript : MonoBehaviour {
 
     public void stage1Selected()
     {
-        levelManager.go_to_level(3);
+        levelManager.go_to_level(2);
     }
 
     public void stage2Selected()
     {
-        levelManager.go_to_level(4);
+        levelManager.go_to_level(3);
     }
 
     public void stage3Selected()
     {
-        levelManager.go_to_level(5);
+        levelManager.go_to_level(4);
     }
 
     public void stage4Selected()
     {
-        levelManager.go_to_level(6);
+        levelManager.go_to_level(5);
     }
 
     public void stage5Selected()
     {
-        levelManager.go_to_level(7);
+        levelManager.go_to_level(6);
     }
 
     public void stage6Selected()
     {
-        levelManager.go_to_level(8);
+        levelManager.go_to_level(7);
     }
 
     public void stage7Selected()
     {
-        levelManager.go_to_level(9);
+        levelManager.go_to_level(8);
     }
 
     public void stage8Selected()
     {
-        levelManager.go_to_level(10);
+        levelManager.go_to_level(9);
     }
 
     public void stage9Selected()
     {
-        levelManager.go_to_level(11);
+        levelManager.go_to_level(10);
     }
 
     public void stage10Selected()
     {
-        levelManager.go_to_level(12);
+        levelManager.go_to_level(11);
     }
 }
