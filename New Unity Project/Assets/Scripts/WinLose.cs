@@ -44,10 +44,11 @@ public class WinLose : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 	    
-
 	}
+
     public int WIN = 1;
     public int WIN_GOLD = 2;
     public int LOSE_BATTERY = 3;
