@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MoveComponent.cs" />
      <Compile Include="Assets\Scripts\PileOfDirtCollision.cs" />
+     <Compile Include="Assets\Scripts\RoombaState.cs" />
      <Compile Include="Assets\Scripts\WinLose.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
