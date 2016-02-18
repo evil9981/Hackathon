@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class DisplayCollected : MonoBehaviour 
+public class DisplayCollected : MonoBehaviour
 {
     public RoombaState roomba_state;
     public Sprite full_normal;
@@ -21,11 +21,11 @@ public class DisplayCollected : MonoBehaviour
     List<GameObject> collected_display = new List<GameObject>();
 
     // Use this for initialization
-    void Start () 
+    void Start()
     {
         int totalTrash = normalTrash + BonusTrash;
-        
-        for (int i = 0; i < totalTrash; i++) 
+
+        for (int i = 0; i < totalTrash; i++)
         {
             float spacing = 9f / (totalTrash - 1f);
             Vector3 pos = new Vector3(x + spacing * i, y, 0.4f);
@@ -45,14 +45,15 @@ public class DisplayCollected : MonoBehaviour
             temp.transform.localScale = new Vector3(scale, scale, scale);
             collected_display.Add(temp);
         }
-    
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
 
 
-	}
+    }
 
     public void change_to_collected(int num_collected)
     {

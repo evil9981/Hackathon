@@ -31,9 +31,9 @@ public class SelectScript : MonoBehaviour {
                 btn.image.color = Color.white;
             }
 
-            if (!levelManager.level_gold_complete[num])
+            if (levelManager.level_gold_complete[num])
             {
-                // TODO: Add gold medal or something?
+                btn.image.color = Color.yellow;
             }
         }
 
