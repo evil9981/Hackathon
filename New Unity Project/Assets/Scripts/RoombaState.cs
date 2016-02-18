@@ -5,7 +5,7 @@ public class RoombaState : MonoBehaviour
 {
     public int battery_level = 100;
 
-    public InGameMenu gameMenu;
+    InGameMenu gameMenu;
     GameLogic gameLogic;
     
     public SpriteRenderer sprite_renderer;
@@ -57,6 +57,7 @@ public class RoombaState : MonoBehaviour
 	void Start () 
     {
         gameLogic = gameObject.GetComponent<GameLogic>();
+        gameMenu = gameLogic.menu;
 	}
 	
     bool show_empty = false;
