@@ -45,19 +45,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Colliders\PileOfDirtCollision.cs" />
+     <Compile Include="Assets\Scripts\Colliders\PowerupCollisions\BatteryCollision.cs" />
+     <Compile Include="Assets\Scripts\Colliders\PowerupCollisions\RangeCollision.cs" />
+     <Compile Include="Assets\Scripts\Colliders\PowerupCollisions\SaverCollision.cs" />
+     <Compile Include="Assets\Scripts\Colliders\PowerupCollisions\ShieldCollision.cs" />
      <Compile Include="Assets\Scripts\FollowRoomba.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\InGameMenu.cs" />
      <Compile Include="Assets\Scripts\LevelManager\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MoveComponent.cs" />
-     <Compile Include="Assets\Scripts\PileOfDirtCollision.cs" />
-     <Compile Include="Assets\Scripts\PowerupCollisions\BatteryCollision.cs" />
-     <Compile Include="Assets\Scripts\PowerupCollisions\RangeCollision.cs" />
-     <Compile Include="Assets\Scripts\PowerupCollisions\SaverCollision.cs" />
-     <Compile Include="Assets\Scripts\PowerupCollisions\ShieldCollision.cs" />
-     <Compile Include="Assets\Scripts\PowerupHandler.cs" />
      <Compile Include="Assets\Scripts\RoombaState.cs" />
+     <Compile Include="Assets\Scripts\RoombaStateHandlers\DirtHandler.cs" />
+     <Compile Include="Assets\Scripts\RoombaStateHandlers\PowerupHandler.cs" />
      <Compile Include="Assets\Scripts\SelectScript.cs" />
      <Compile Include="Assets\Scripts\displayCollected.cs" />
  <Reference Include="UnityEngine.UI">

@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PileOfDirtCollision : MonoBehaviour {
+public class PileOfDirtCollision : MonoBehaviour 
+{
 
-    public GameLogic gameLogic;
+    RoombaState roomba_state;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+    {
+        roomba_state = gameObject.GetComponentInParent<DirtHandler>().roomba_state;
 	}
 	
 	// Update is called once per frame
@@ -17,8 +19,7 @@ public class PileOfDirtCollision : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        gameLogic.trashCollected();
+        roomba_state.hit_dirt();
         Destroy(gameObject);
-        Debug.Log("Hit!");
     }
 }
