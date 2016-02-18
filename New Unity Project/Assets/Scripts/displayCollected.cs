@@ -23,10 +23,11 @@ public class displayCollected : MonoBehaviour {
         
         for (int i = 0; i < totalTrash; i++) {
             float spacing = 9f / (totalTrash - 1f);
-            Vector3 pos = new Vector3(x + spacing * i, y, 0f);
+            Vector3 pos = new Vector3(x + spacing * i, y, 0.5f);
             GameObject temp = (GameObject)Instantiate(gray, transform.position, transform.rotation);
             temp.transform.parent = gameObject.transform;
             temp.transform.position = pos;
+            temp.transform.localPosition = new Vector3(temp.transform.localPosition.x, temp.transform.localPosition.y, 0.4f);
             temp.transform.localScale = new Vector3(scale, scale, scale);
             collected_display.Add(temp);
         }
