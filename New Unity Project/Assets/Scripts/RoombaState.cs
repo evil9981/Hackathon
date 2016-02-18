@@ -101,6 +101,11 @@ public class RoombaState : MonoBehaviour
         }
 	}
 
+    public void hit_dirt()
+    {
+        gameLogic.trashCollected();
+    }
+
     public void hit_battery_power_up()
     {
         Debug.Log("HIT A BATTERY POWER UP!");
