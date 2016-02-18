@@ -19,6 +19,13 @@ public class LevelManager
         return LevelManager.instance;
     }
 
+
+    public void go_to_level(int to_level)
+    {
+        level = to_level;
+        SceneManager.LoadScene(level);
+    }
+
     static int level = 0;
     public void levelComplete()
     {
