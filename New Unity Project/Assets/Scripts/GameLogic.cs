@@ -9,9 +9,12 @@ public class GameLogic : MonoBehaviour
     public int totalPass;
     public displayCollected display;
 
+    public InGameMenu menu;
+
 	// Use this for initialization
 	void Start () 
     {
+        
 	}
 	
 	// Update is called once per frame
@@ -20,7 +23,7 @@ public class GameLogic : MonoBehaviour
         
 	}
 
-    public void noBattery(InGameMenu menu)
+    public void noBattery()
     {
         if (collectedTrash == totalPass)
         {
@@ -40,6 +43,16 @@ public class GameLogic : MonoBehaviour
     {
         collectedTrash += 1;
         display.change_to_collected(collectedTrash);
+
+        if (collectedTrash == totalPass)
+        {
+            menu.showEndOfGame(menu.WIN_GOLD);
+        }
+    }
+
+    public void runOverWires()
+    {
+        menu.showEndOfGame(menu.LOSE_WIRES);
     }
 
     public int getCollected()

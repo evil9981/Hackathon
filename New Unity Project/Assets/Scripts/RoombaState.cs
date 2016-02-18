@@ -97,8 +97,7 @@ public class RoombaState : MonoBehaviour
             else 
             {
                 sprite_renderer.sprite = normal_0;
-                gameMenu.pause_game();
-                gameLogic.noBattery(gameMenu);
+                gameLogic.noBattery();
             }
         }
 	}

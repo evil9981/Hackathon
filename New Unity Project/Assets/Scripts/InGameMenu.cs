@@ -21,10 +21,13 @@ public class InGameMenu : MonoBehaviour
     public Button winMainMenu;
     public Button loseRetry;
     public Button loseMainMenu;
+    LevelManager level_manager;
 
 	// Use this for initialization
 	void Start ()
     {
+        level_manager = LevelManager.getInst();
+
         ingameMenu.enabled = false;
 
         winMenu = winMenu.GetComponent<Canvas>();
@@ -49,7 +52,9 @@ public class InGameMenu : MonoBehaviour
         winRetry.enabled = false;
         winMainMenu.enabled = false;
         loseRetry.enabled = false;
-        loseMainMenu.enabled = false;   
+        loseMainMenu.enabled = false;
+
+        resume_game();
 	}
 
     void Update()
@@ -76,8 +81,12 @@ public class InGameMenu : MonoBehaviour
 
     public void showEndOfGame(int Condition)
     {
+        pause_game();
+
         if (Condition == WIN)
         {
+            level_manager.levelComplete();
+
             winMenu.enabled = true;
             pass.enabled = true;
             winRetry.enabled = true;
@@ -86,6 +95,8 @@ public class InGameMenu : MonoBehaviour
         }
         else if (Condition == WIN_GOLD)
         {
+            level_manager.levelGoldComplete();
+
             winMenu.enabled = true;
             gold.enabled = true;
             winRetry.enabled = true;
@@ -110,22 +121,22 @@ public class InGameMenu : MonoBehaviour
 
     public void nextLevelPress()
     {
-        LevelManager.getInst().advanceToNextLevel();
+        level_manager.advanceToNextLevel();
     }
 
     public void retryPress()
     {
-        LevelManager.getInst().retryLevel();
+        level_manager.retryLevel();
     }
 
     public void mainMenuPress()
     {
-        LevelManager.getInst().quitToMenu();
+        level_manager.quitToMenu();
     }
 
     public void QuitPress()
     {
-        LevelManager.getInst().quitToMenu();
+        level_manager.quitToMenu();
     }
   
     public void ResumePress()
@@ -135,7 +146,7 @@ public class InGameMenu : MonoBehaviour
 
     public void ResetLevel()
     {
-        LevelManager.getInst().retryLevel();
+        level_manager.retryLevel();
     }
 
     public void pause_game()
