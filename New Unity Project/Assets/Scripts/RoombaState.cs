@@ -53,9 +53,13 @@ public class RoombaState : MonoBehaviour
     public Sprite range_sprite;
     public Sprite shield_sprite;
 
+
+    Rigidbody2D rigid;
+
 	// Use this for initialization
 	void Start () 
     {
+        rigid = gameObject.GetComponent<Rigidbody2D>();
         gameLogic = gameObject.GetComponent<GameLogic>();
         gameMenu = gameLogic.menu;
 	}
@@ -64,7 +68,7 @@ public class RoombaState : MonoBehaviour
 
     enum EnergyCost : int
     {
-        Normal = 1, Move = 2, Dirt_move = 3, Water_move = 4
+        Normal = 1, Dirt_move = 2, Water_move = 3
     }
     EnergyCost cost = EnergyCost.Normal;
 
@@ -134,11 +138,37 @@ public class RoombaState : MonoBehaviour
     {        
         if (!gameMenu.isPaused())
         {
+
             blinking_time -= Time.deltaTime;
             reduce_energy_time -= Time.deltaTime;
             powerup_time -= Time.deltaTime;
             zoom_powerup_time -= Time.deltaTime;
 
+            if (current_powerup != PowerUp.Shield && is_on_wires)
+            {
+                gameLogic.runOverWires();
+            }
+
+            if (is_on_dirt && !is_on_water)
+            {
+                cost = EnergyCost.Dirt_move;
+                rigid.mass = 50;
+            }
+            else
+            {
+                rigid.mass = 20;
+            }
+
+            if (is_on_water)
+            {
+                cost = EnergyCost.Water_move;
+            }
+
+            if (!is_on_water && !is_on_dirt)
+            {
+                cost = EnergyCost.Normal;
+            }
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (powerup_picked == PowerUp.Range)
@@ -211,14 +241,25 @@ public class RoombaState : MonoBehaviour
             if (reduce_energy_time <= 0)
             {
                 reduce_energy_time = reduce_energy_cooldown;
+
+                float move = rigid.velocity.magnitude;
+                int actual_cost = (int)(cost);
+
                 if (current_powerup == PowerUp.Saver)
                 {
-                    battery_level -= (int)(cost - 1);
+                    actual_cost = (int)(cost) - 1;
                 }
-                else if (current_powerup != PowerUp.Shield)
+                else if (current_powerup == PowerUp.Shield)
                 {
-                    battery_level -= (int)cost;
+                    actual_cost = 0;
                 }
+
+                if (move > 0.5f)
+                {
+                    actual_cost = actual_cost * 2;
+                }
+
+                battery_level -= actual_cost;
             }
 
 	        if (battery_level > 87.5M)
@@ -405,7 +446,7 @@ public class RoombaState : MonoBehaviour
         }
 	}
 
-    public void hit_dirt()
+    public void hit_dust_cloud()
     {
         gameLogic.trashCollected();
     }
@@ -430,31 +471,37 @@ public class RoombaState : MonoBehaviour
         powerup_picked = PowerUp.Saver;
     }
 
-    public void hit_wires()
-    {
-        if (current_powerup != PowerUp.Shield)
-        {
-            gameLogic.runOverWires();
-        }
-    }
+    bool is_on_dirt = false;
+    bool is_on_water = false;
+    bool is_on_wires = false;
 
     public void enter_dirt()
     {
-        Debug.Log("ENTER DIRT!");
+        is_on_dirt = true;
     }
 
     public void exit_dirt()
     {
-        Debug.Log("EXIT DIRT!");
+        is_on_dirt = false;
     }
 
     public void enter_water()
     {
-        Debug.Log("ENTER WATER!");
+        is_on_water = true;
     }
 
     public void exit_water()
     {
-        Debug.Log("EXIT WATER!");
+        is_on_water = false;
+    }
+
+    public void enter_wires()
+    {
+        is_on_wires = true;
+    }
+
+    public void exit_wires()
+    {
+        is_on_wires = false;
     }
 }
