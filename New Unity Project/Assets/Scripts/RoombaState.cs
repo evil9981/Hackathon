@@ -4,6 +4,9 @@ using System.Collections;
 public class RoombaState : MonoBehaviour 
 {
     public int battery_level = 100;
+    AudioSource soundSource;
+    public AudioClip power_up_sound;
+    public AudioClip vacuum_sound;
 
     InGameMenu gameMenu;
     GameLogic gameLogic;
@@ -60,6 +63,7 @@ public class RoombaState : MonoBehaviour
 	void Start () 
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
+        soundSource = gameObject.GetComponent<AudioSource>();
         gameLogic = gameObject.GetComponent<GameLogic>();
         gameMenu = gameLogic.menu;
 	}
@@ -448,26 +452,36 @@ public class RoombaState : MonoBehaviour
 
     public void hit_dust_cloud()
     {
+        soundSource.clip = vacuum_sound;
+        soundSource.Play();
         gameLogic.trashCollected();
     }
 
     public void hit_battery_power_up()
     {
+        soundSource.clip = power_up_sound;
+        soundSource.Play();
         powerup_picked = PowerUp.Battery;
     }
 
     public void hit_range_power_up()
     {
+        soundSource.clip = power_up_sound;
+        soundSource.Play();
         powerup_picked = PowerUp.Range;
     }
 
     public void hit_shield_power_up()
     {
+        soundSource.clip = power_up_sound;
+        soundSource.Play();
         powerup_picked = PowerUp.Shield;
     }
 
     public void hit_saver_power_up()
     {
+        soundSource.clip = power_up_sound;
+        soundSource.Play();
         powerup_picked = PowerUp.Saver;
     }
 
