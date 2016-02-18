@@ -128,6 +128,7 @@ public class RoombaState : MonoBehaviour
                     Camera.main.orthographicSize = origOrtho;
                     do_zoom_out = true;
                     do_zoom_powerup = false;
+                    // ENABLE BAR HERE
                     current_powerup = PowerUp.None;
                 }
             }
@@ -177,6 +178,7 @@ public class RoombaState : MonoBehaviour
             {
                 if (powerup_picked == PowerUp.Range)
                 {
+                    // DISABLE THE BAR HERE
                     do_zoom_powerup = true;
                     current_powerup = powerup_picked;
                     powerup_picked = PowerUp.None;
