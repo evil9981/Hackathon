@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RoombaState : MonoBehaviour 
 {
-    decimal battery_level = 100.0M;
+    decimal battery_level = 10.0M;
     public InGameMenu gameMenu;
     GameLogic gameLogic;
     
