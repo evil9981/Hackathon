@@ -29,13 +29,19 @@ public class LevelManager
     static int level = 0;
     public void levelComplete()
     {
-        level_complete[level-2] = true;
+        if (!(level < 2))
+        {
+            level_complete[level - 2] = true;
+        }
     }
 
     public void levelGoldComplete()
     {
-        level_complete[level - 2] = true;
-        level_gold_complete[level-2] = true;
+        if (!(level < 2))
+        {
+            level_complete[level - 2] = true;
+            level_gold_complete[level - 2] = true;
+        }
     }
 
     public void advanceToNextLevel()
