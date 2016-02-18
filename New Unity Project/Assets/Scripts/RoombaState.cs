@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RoombaState : MonoBehaviour 
 {
-    decimal battery_level = 10.0M;
+    decimal battery_level = 100.0M;
     public InGameMenu gameMenu;
     GameLogic gameLogic;
     
@@ -53,7 +53,6 @@ public class RoombaState : MonoBehaviour
             {
                 reduce_energy_time = reduce_energy_cooldown;
                 battery_level -= surface_reduction;
-                Debug.Log(battery_level);
             }
 
 	        if (battery_level > 87.5M)
@@ -101,4 +100,24 @@ public class RoombaState : MonoBehaviour
             }
         }
 	}
+
+    public void hit_battery_power_up()
+    {
+        Debug.Log("HIT A BATTERY POWER UP!");
+    }
+
+    public void hit_range_power_up()
+    {
+        Debug.Log("HIT A RANGE POWER UP!");
+    }
+
+    public void hit_shield_power_up()
+    {
+        Debug.Log("HIT A SHIELD POWER UP!");
+    }
+
+    public void hit_saver_power_up()
+    {
+        Debug.Log("HIT A SAVER POWER UP!");
+    }
 }
