@@ -52,6 +52,11 @@
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MoveComponent.cs" />
      <Compile Include="Assets\Scripts\PileOfDirtCollision.cs" />
+     <Compile Include="Assets\Scripts\PowerupCollisions\BatteryCollision.cs" />
+     <Compile Include="Assets\Scripts\PowerupCollisions\RangeCollision.cs" />
+     <Compile Include="Assets\Scripts\PowerupCollisions\SaverCollision.cs" />
+     <Compile Include="Assets\Scripts\PowerupCollisions\ShieldCollision.cs" />
+     <Compile Include="Assets\Scripts\PowerupHandler.cs" />
      <Compile Include="Assets\Scripts\RoombaState.cs" />
      <Compile Include="Assets\Scripts\SelectScript.cs" />
      <Compile Include="Assets\Scripts\displayCollected.cs" />
