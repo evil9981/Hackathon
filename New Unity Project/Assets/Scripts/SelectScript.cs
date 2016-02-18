@@ -8,14 +8,19 @@ public class SelectScript : MonoBehaviour {
 
     LevelManager levelManager = LevelManager.getInst();
     public Button quitButton;
+    public Sprite greenc;
+    public Sprite goldc;
+    Image img;
 
     // Use this for initialization
     void Awake()
     {
+        
         quitButton = quitButton.GetComponent<Button>();
         var list = gameObject.GetComponentsInChildren<Button>();
         foreach(var btn in list)
         {
+            img = btn.gameObject.GetComponentInChildren<Image>();
             string name = btn.GetComponentInChildren<Text>().text;
             string num_str = Regex.Replace(name, @"[^\d]", "");
             int num = int.Parse(num_str) - 1 ;
@@ -23,17 +28,22 @@ public class SelectScript : MonoBehaviour {
             if (!levelManager.level_complete[num])
             {
                 btn.enabled = false;
-                btn.image.color = Color.gray;
+                Debug.Log("failed" + num);
+               
             }
             else
             {
+                Debug.Log("succeeded" + num);
                 btn.enabled = true;
-                btn.image.color = Color.white;
+                //btn.image.color = Color.white;
+                img.sprite = greenc;
+                //btn.image.overrideSprite = Sprite.Create(Resources.Load<Texture2D>("green-check"), btn.image.sprite.rect, btn.image.sprite.pivot);                  
             }
 
             if (levelManager.level_gold_complete[num])
             {
-                btn.image.color = Color.yellow;
+                img.sprite = goldc;
+                //btn.image.overrideSprite = Sprite.Create(Resources.Load<Texture2D>("gold-check"), btn.image.sprite.rect, btn.image.sprite.pivot);
             }
         }
 
