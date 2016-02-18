@@ -27,7 +27,7 @@ public class DisplayCollected : MonoBehaviour
 
         for (int i = 0; i < totalTrash; i++)
         {
-            float spacing = 9f / (totalTrash - 1f);
+            float spacing = 92f / (totalTrash - 1f);
             Vector3 pos = new Vector3(x + spacing * i, y, 0.4f);
 
             GameObject temp;
@@ -40,7 +40,7 @@ public class DisplayCollected : MonoBehaviour
                 temp = (GameObject)Instantiate(gold, transform.position, transform.rotation);
             }
             temp.transform.parent = gameObject.transform;
-            temp.transform.position = pos;
+            temp.transform.localPosition = pos;
             temp.transform.localPosition = new Vector3(temp.transform.localPosition.x, temp.transform.localPosition.y, 0.4f);
             temp.transform.localScale = new Vector3(scale, scale, scale);
             collected_display.Add(temp);
