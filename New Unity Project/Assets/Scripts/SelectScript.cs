@@ -28,22 +28,17 @@ public class SelectScript : MonoBehaviour {
             if (!levelManager.level_complete[num])
             {
                 btn.enabled = false;
-                Debug.Log("failed" + num);
                
             }
             else
             {
-                Debug.Log("succeeded" + num);
                 btn.enabled = true;
-                //btn.image.color = Color.white;
                 img.sprite = greenc;
-                //btn.image.overrideSprite = Sprite.Create(Resources.Load<Texture2D>("green-check"), btn.image.sprite.rect, btn.image.sprite.pivot);                  
             }
 
             if (levelManager.level_gold_complete[num])
             {
                 img.sprite = goldc;
-                //btn.image.overrideSprite = Sprite.Create(Resources.Load<Texture2D>("gold-check"), btn.image.sprite.rect, btn.image.sprite.pivot);
             }
         }
 

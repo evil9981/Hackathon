@@ -16,9 +16,15 @@ public class WireCollision : MonoBehaviour {
 	
 	}
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        roomba_state.exit_wires();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        roomba_state.hit_wires();
+        roomba_state.enter_wires();
     } 
+
 
 }

@@ -19,7 +19,7 @@ public class PileOfDirtCollision : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        roomba_state.hit_dirt();
+        roomba_state.hit_dust_cloud();
         Destroy(gameObject);
     }
 }
