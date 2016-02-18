@@ -2,24 +2,39 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 public class SelectScript : MonoBehaviour {
 
     LevelManager levelManager = LevelManager.getInst();
-    List<Button> stages = new List<Button>();
     public Button quitButton;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         quitButton = quitButton.GetComponent<Button>();
         var list = gameObject.GetComponentsInChildren<Button>();
         foreach(var btn in list)
         {
-            Debug.Log(btn.GetComponentInChildren<Text>().text);
-           
-            btn.enabled = false;
-            btn.image.color = Color.gray;
+            string name = btn.GetComponentInChildren<Text>().text;
+            string num_str = Regex.Replace(name, @"[^\d]", "");
+            int num = int.Parse(num_str) - 1 ;
+
+            if (!levelManager.level_complete[num])
+            {
+                btn.enabled = false;
+                btn.image.color = Color.gray;
+            }
+            else
+            {
+                btn.enabled = true;
+                btn.image.color = Color.white;
+            }
+
+            if (!levelManager.level_gold_complete[num])
+            {
+                // TODO: Add gold medal or something?
+            }
         }
 
 
@@ -27,20 +42,7 @@ public class SelectScript : MonoBehaviour {
 
     void Update()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            if (levelManager.level_gold_complete[i])
-            {
-                stages[i].image.color = Color.yellow;
-                stages[i].enabled = true;
-            }
 
-            else if (levelManager.level_complete[i])
-            {
-                stages[i].image.color = Color.green;
-                stages[i].enabled = true;
-            }
-        }
     }
 
     public void quitPress()
@@ -50,51 +52,51 @@ public class SelectScript : MonoBehaviour {
 
     public void stage1Selected()
     {
-        levelManager.go_to_level(1);
+        levelManager.go_to_level(2);
     }
 
     public void stage2Selected()
     {
-        levelManager.go_to_level(2);
+        levelManager.go_to_level(3);
     }
 
     public void stage3Selected()
     {
-        levelManager.go_to_level(3);
+        levelManager.go_to_level(4);
     }
 
     public void stage4Selected()
     {
-        levelManager.go_to_level(4);
+        levelManager.go_to_level(5);
     }
 
     public void stage5Selected()
     {
-        levelManager.go_to_level(5);
+        levelManager.go_to_level(6);
     }
 
     public void stage6Selected()
     {
-        levelManager.go_to_level(6);
+        levelManager.go_to_level(7);
     }
 
     public void stage7Selected()
     {
-        levelManager.go_to_level(7);
+        levelManager.go_to_level(8);
     }
 
     public void stage8Selected()
     {
-        levelManager.go_to_level(8);
+        levelManager.go_to_level(9);
     }
 
     public void stage9Selected()
     {
-        levelManager.go_to_level(9);
+        levelManager.go_to_level(10);
     }
 
     public void stage10Selected()
     {
-        levelManager.go_to_level(10);
+        levelManager.go_to_level(11);
     }
 }
