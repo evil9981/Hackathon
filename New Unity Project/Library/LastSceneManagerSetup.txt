@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SampleLevel 1.unity
+- path: Assets/TemplateScene.unity
   isLoaded: 1
   isActive: 1
