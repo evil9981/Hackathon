@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PileOfDirtCollision : MonoBehaviour {
 
+    public GameLogic gameLogic;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +17,8 @@ public class PileOfDirtCollision : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        gameLogic.trashCollected();
+        Destroy(gameObject);
         Debug.Log("Hit!");
     }
 }

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class WinLose : MonoBehaviour {
 
-    protected int Condition = 0;
+    int Condition = 0;
     public Canvas winMenu;
     public Canvas loseMenu;
     public Text pass;
