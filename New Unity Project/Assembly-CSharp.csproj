@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Colliders\TrapCollisions\DirtyCollision.cs" />
      <Compile Include="Assets\Scripts\Colliders\TrapCollisions\WaterCollision.cs" />
      <Compile Include="Assets\Scripts\Colliders\TrapCollisions\WireCollision.cs" />
+     <Compile Include="Assets\Scripts\DisplayCollected.cs" />
      <Compile Include="Assets\Scripts\FollowRoomba.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\InGameMenu.cs" />
@@ -63,7 +64,6 @@
      <Compile Include="Assets\Scripts\RoombaStateHandlers\DirtHandler.cs" />
      <Compile Include="Assets\Scripts\RoombaStateHandlers\PowerupHandler.cs" />
      <Compile Include="Assets\Scripts\SelectScript.cs" />
-     <Compile Include="Assets\Scripts\displayCollected.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
