@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager  
 {
     static private LevelManager instance = new LevelManager();
-    bool[] level_complete = new bool[20];
-    bool[] level_gold_complete = new bool[20];
+    public bool[] level_complete = new bool[20];
+    public bool[] level_gold_complete = new bool[20];
 
 	// Use this for initialization
     public LevelManager() 
