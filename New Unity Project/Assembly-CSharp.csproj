@@ -50,6 +50,10 @@
      <Compile Include="Assets\Scripts\Colliders\PowerupCollisions\RangeCollision.cs" />
      <Compile Include="Assets\Scripts\Colliders\PowerupCollisions\SaverCollision.cs" />
      <Compile Include="Assets\Scripts\Colliders\PowerupCollisions\ShieldCollision.cs" />
+     <Compile Include="Assets\Scripts\Colliders\TrapCollisions\DirtyCollision.cs" />
+     <Compile Include="Assets\Scripts\Colliders\TrapCollisions\WaterCollision.cs" />
+     <Compile Include="Assets\Scripts\Colliders\TrapCollisions\WireCollision.cs" />
+     <Compile Include="Assets\Scripts\DisplayCollected.cs" />
      <Compile Include="Assets\Scripts\FollowRoomba.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\InGameMenu.cs" />
@@ -60,7 +64,6 @@
      <Compile Include="Assets\Scripts\RoombaStateHandlers\DirtHandler.cs" />
      <Compile Include="Assets\Scripts\RoombaStateHandlers\PowerupHandler.cs" />
      <Compile Include="Assets\Scripts\SelectScript.cs" />
-     <Compile Include="Assets\Scripts\displayCollected.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

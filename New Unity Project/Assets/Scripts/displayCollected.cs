@@ -2,37 +2,50 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class displayCollected : MonoBehaviour {
+public class DisplayCollected : MonoBehaviour 
+{
+    public RoombaState roomba_state;
+    public Sprite full_normal;
+    public Sprite full_gold;
 
-    public GameLogic gameLogic;
-    public Sprite normal;
-    public Sprite gold;
+    public GameObject gray;
+    public GameObject gold;
+
     public float x;
     public float y;
     public float scale;
     public int normalTrash;
     public int BonusTrash;
-    public GameObject gray;
     int collected;
 
     List<GameObject> collected_display = new List<GameObject>();
 
     // Use this for initialization
-    void Start () {
+    void Start () 
+    {
         int totalTrash = normalTrash + BonusTrash;
         
-        for (int i = 0; i < totalTrash; i++) {
+        for (int i = 0; i < totalTrash; i++) 
+        {
             float spacing = 9f / (totalTrash - 1f);
             Vector3 pos = new Vector3(x + spacing * i, y, 0.4f);
-            GameObject temp = (GameObject)Instantiate(gray, transform.position, transform.rotation);
+
+            GameObject temp;
+            if (i < normalTrash)
+            {
+                temp = (GameObject)Instantiate(gray, transform.position, transform.rotation);
+            }
+            else
+            {
+                temp = (GameObject)Instantiate(gold, transform.position, transform.rotation);
+            }
             temp.transform.parent = gameObject.transform;
             temp.transform.position = pos;
             temp.transform.localPosition = new Vector3(temp.transform.localPosition.x, temp.transform.localPosition.y, 0.4f);
             temp.transform.localScale = new Vector3(scale, scale, scale);
             collected_display.Add(temp);
         }
-
-
+    
     }
 	
 	// Update is called once per frame
@@ -45,11 +58,11 @@ public class displayCollected : MonoBehaviour {
     {
         if (num_collected <= normalTrash)
         {
-            collected_display[num_collected - 1].GetComponent<SpriteRenderer>().sprite = normal;
+            collected_display[num_collected - 1].GetComponent<SpriteRenderer>().sprite = full_normal;
         }
         else
         {
-            collected_display[num_collected - 1].GetComponent<SpriteRenderer>().sprite = gold;
+            collected_display[num_collected - 1].GetComponent<SpriteRenderer>().sprite = full_gold;
         }
     }
 

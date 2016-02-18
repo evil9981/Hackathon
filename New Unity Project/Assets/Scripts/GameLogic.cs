@@ -7,7 +7,7 @@ public class GameLogic : MonoBehaviour
     int collectedTrash = 0;
     public int passCondition;
     public int totalPass;
-    public displayCollected display;
+    public DisplayCollected display;
 
     public InGameMenu menu;
 

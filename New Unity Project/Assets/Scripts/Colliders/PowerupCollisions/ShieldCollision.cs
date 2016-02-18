@@ -6,9 +6,9 @@ public class ShieldCollision : MonoBehaviour
 
     RoombaState roomba_state;
 	// Use this for initialization
-	void Start () 
+	void Start ()
     {
-        roomba_state = gameObject.GetComponentInParent<PowerupHandler>().roomba_state;
+        roomba_state = Camera.main.GetComponent<DisplayCollected>().roomba_state;
 	}
 	
 	// Update is called once per frame

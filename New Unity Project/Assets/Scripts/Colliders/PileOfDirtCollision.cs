@@ -9,7 +9,7 @@ public class PileOfDirtCollision : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        roomba_state = gameObject.GetComponentInParent<DirtHandler>().roomba_state;
+        roomba_state = Camera.main.GetComponent<DisplayCollected>().roomba_state;
 	}
 	
 	// Update is called once per frame

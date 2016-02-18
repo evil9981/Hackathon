@@ -125,4 +125,29 @@ public class RoombaState : MonoBehaviour
     {
         Debug.Log("HIT A SAVER POWER UP!");
     }
+
+    public void hit_wires()
+    {
+        gameLogic.runOverWires();
+    }
+
+    public void enter_dirt()
+    {
+        Debug.Log("ENTER DIRT!");
+    }
+
+    public void exit_dirt()
+    {
+        Debug.Log("EXIT DIRT!");
+    }
+
+    public void enter_water()
+    {
+        Debug.Log("ENTER WATER!");
+    }
+
+    public void exit_water()
+    {
+        Debug.Log("EXIT WATER!");
+    }
 }
