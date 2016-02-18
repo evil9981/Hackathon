@@ -172,22 +172,22 @@ public class RoombaState : MonoBehaviour
                 powerup_sprite.sprite = battery_sprite;
                 powerup_sprite.enabled = true;
             }
-            else if (powerup_picked == PowerUp.Range)
+            if (powerup_picked == PowerUp.Range)
             {
                 powerup_sprite.sprite = range_sprite;
                 powerup_sprite.enabled = true;
             }
-            else if (powerup_picked == PowerUp.Saver)
+            if (powerup_picked == PowerUp.Saver)
             {
                 powerup_sprite.sprite = saver_sprite;
                 powerup_sprite.enabled = true;
             }
-            else if (powerup_picked == PowerUp.Shield)
+            if (powerup_picked == PowerUp.Shield)
             {
                 powerup_sprite.sprite = shield_sprite;
                 powerup_sprite.enabled = true;
             }
-            else
+            if (powerup_picked == PowerUp.None)
             {
                 powerup_sprite.enabled = false;
             }
