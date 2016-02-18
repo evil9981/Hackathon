@@ -19,3 +19,24 @@ C:\Users\user1\Documents\Hackathon\New Unity Project\Temp\bin\Debug\UnityEngine.
 C:\Users\user1\Documents\Hackathon\New Unity Project\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\user1\Documents\Hackathon\New Unity Project\obj\Debug\Assembly-CSharp.dll
 C:\Users\user1\Documents\Hackathon\New Unity Project\obj\Debug\Assembly-CSharp.pdb
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Assembly-CSharp.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEditor.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEngine.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEngine.UI.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Mono.Cecil.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Unity.DataContract.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Unity.CecilTools.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEngine.xml
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEditor.xml
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEngine.UI.xml
+D:\I, Roomba\New Unity Project\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\I, Roomba\New Unity Project\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\I, Roomba\New Unity Project\obj\Debug\Assembly-CSharp.dll
+D:\I, Roomba\New Unity Project\obj\Debug\Assembly-CSharp.pdb

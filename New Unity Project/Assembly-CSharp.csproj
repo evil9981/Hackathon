@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\LevelManager\LevelManager.cs" />
      <Compile Include="Assets\Scripts\FollowRoomba.cs" />
+     <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\InGameMenu.cs" />
      <Compile Include="Assets\Scripts\LoadOnClick.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\Scripts\PileOfDirtCollision.cs" />
      <Compile Include="Assets\Scripts\RoombaState.cs" />
      <Compile Include="Assets\Scripts\WinLose.cs" />
+     <Compile Include="Assets\Scripts\displayCollected.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
