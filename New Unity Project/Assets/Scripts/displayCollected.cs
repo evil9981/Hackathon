@@ -42,7 +42,7 @@ public class displayCollected : MonoBehaviour {
 
     public void change_to_collected(int num_collected)
     {
-        if (num_collected < normalTrash)
+        if (num_collected <= normalTrash)
         {
             collected_display[num_collected - 1].GetComponent<SpriteRenderer>().sprite = normal;
         }
