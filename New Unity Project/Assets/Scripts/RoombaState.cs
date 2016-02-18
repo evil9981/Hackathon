@@ -3,8 +3,9 @@ using System.Collections;
 
 public class RoombaState : MonoBehaviour 
 {
-    decimal battery_level = 27.0M;
+    decimal battery_level = 100.0M;
     public InGameMenu gameMenu;
+    GameLogic gameLogic;
     
     public SpriteRenderer sprite_renderer;
 
@@ -21,7 +22,7 @@ public class RoombaState : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        
+        gameLogic = gameObject.GetComponent<GameLogic>();
 	}
 	
 	// Update is called once per frame
@@ -96,6 +97,8 @@ public class RoombaState : MonoBehaviour
             else 
             {
                 sprite_renderer.sprite = normal_0;
+                gameMenu.pause_game();
+                gameLogic.noBattery(gameMenu);
             }
         }
 	}

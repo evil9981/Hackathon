@@ -23,7 +23,7 @@ public class displayCollected : MonoBehaviour {
         
         for (int i = 0; i < totalTrash; i++) {
             float spacing = 9f / (totalTrash - 1f);
-            Vector3 pos = new Vector3(x + spacing * i, y, -2f);
+            Vector3 pos = new Vector3(x + spacing * i, y, 0f);
             GameObject temp = (GameObject)Instantiate(gray, transform.position, transform.rotation);
             temp.transform.parent = gameObject.transform;
             temp.transform.position = pos;
