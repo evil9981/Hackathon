@@ -64,7 +64,17 @@
      <Compile Include="Assets\Scripts\RoombaStateHandlers\DirtHandler.cs" />
      <Compile Include="Assets\Scripts\RoombaStateHandlers\PowerupHandler.cs" />
      <Compile Include="Assets\Scripts\SelectScript.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Youwin.cs" />
+=======
+<<<<<<< HEAD
+     <Compile Include="Assets\Scripts\Youwin.cs" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+=======
+>>>>>>> fe7dc42bce1cbc7cd01c4ed9f01ebffd55c9c68d
+>>>>>>> f02cba717b0a7bbda93e13cf79718bfabde7537b
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

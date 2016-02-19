@@ -7,9 +7,13 @@ public class RoombaState : MonoBehaviour
     AudioSource soundSource;
     public AudioClip power_up_sound;
     public AudioClip vacuum_sound;
+<<<<<<< HEAD
 	public Camera cam;
 
 	SpriteRenderer[] camObj;
+=======
+    public SpriteRenderer uiBox;
+>>>>>>> f02cba717b0a7bbda93e13cf79718bfabde7537b
 
     InGameMenu gameMenu;
     GameLogic gameLogic;
@@ -132,11 +136,15 @@ public class RoombaState : MonoBehaviour
                     do_zoom_out = true;
                     do_zoom_powerup = false;
                     // ENABLE BAR HERE
+<<<<<<< HEAD
 					camObj = cam.GetComponentsInChildren<SpriteRenderer>();
 					foreach (SpriteRenderer obj in camObj) 
 					{
 						obj.enabled = true;
 					}
+=======
+                    uiBox.enabled = true;
+>>>>>>> f02cba717b0a7bbda93e13cf79718bfabde7537b
                     current_powerup = PowerUp.None;
                 }
             }
@@ -187,11 +195,15 @@ public class RoombaState : MonoBehaviour
                 if (powerup_picked == PowerUp.Range)
                 {
                     // DISABLE THE BAR HERE
+<<<<<<< HEAD
 					camObj = cam.GetComponentsInChildren<SpriteRenderer>();
 					foreach (SpriteRenderer obj in camObj) 
 					{
 						obj.enabled = false;
 					}
+=======
+                    uiBox.enabled = false;
+>>>>>>> f02cba717b0a7bbda93e13cf79718bfabde7537b
                     do_zoom_powerup = true;
                     current_powerup = powerup_picked;
                     powerup_picked = PowerUp.None;
